@@ -10,10 +10,11 @@ window.addEventListener("scroll", () => {
 
 // Typing animation
 const roles = [
-    "Aspiring Software Developer",
+    "Frontend Developer",
     "Computer Science Engineering Student",
-    "Future Full Stack Developer"
+    "React & Web Developer"
 ];
+
 
 let roleIndex = 0;
 let charIndex = 0;
