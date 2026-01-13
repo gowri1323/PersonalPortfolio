@@ -151,3 +151,17 @@ body {
         transform: translateY(0);
     }
 }
+
+/* ===== TYPING EFFECT ===== */
+.typing-text::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 1s infinite;
+    color: #a855f7;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}

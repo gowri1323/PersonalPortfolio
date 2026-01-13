@@ -7,3 +7,37 @@ window.addEventListener("scroll", () => {
         navbar.style.boxShadow = "none";
     }
 });
+
+// Typing animation
+const roles = [
+    "Aspiring Software Developer",
+    "Computer Science Engineering Student",
+    "Future Full Stack Developer"
+];
+
+let roleIndex = 0;
+let charIndex = 0;
+const typingText = document.querySelector(".typing-text");
+
+function typeEffect() {
+    if (charIndex < roles[roleIndex].length) {
+        typingText.textContent += roles[roleIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 100);
+    } else {
+        setTimeout(eraseEffect, 2000);
+    }
+}
+
+function eraseEffect() {
+    if (charIndex > 0) {
+        typingText.textContent = roles[roleIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseEffect, 60);
+    } else {
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(typeEffect, 500);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
