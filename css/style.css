@@ -128,18 +128,15 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-.image-placeholder {
+ 
+.profile-img {
     width: 280px;
     height: 280px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #a855f7, #7c3aed);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-weight: 600;
+    object-fit: cover;
+    border: 5px solid #a855f7;
     animation: float 3s ease-in-out infinite;
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.4);
 }
 
 /* ===== FLOAT ANIMATION ===== */
